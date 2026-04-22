@@ -1,8 +1,9 @@
-"use client"; // Required for interactivity in Next.js
+"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FileText, Github, Linkedin, Mail, X } from "lucide-react";
+import { FileText, Mail, X } from "lucide-react";
+import { FiGithub, FiLinkedin } from "react-icons/fi"; // Perfect visual match for Lucide
 
 export default function Dock() {
     const [isResumeOpen, setIsResumeOpen] = useState(false);
@@ -19,11 +20,11 @@ export default function Dock() {
                 <div className="flex items-center gap-4 px-6 py-3 bg-black/40 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl">
 
                     {/* Social Links */}
-                    <a href="https://github.com/yourusername" target="_blank" className="p-2 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all">
-                        <Github size={20} />
+                    <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className="p-2 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all">
+                        <FiGithub size={20} />
                     </a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" className="p-2 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all">
-                        <Linkedin size={20} />
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="p-2 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all">
+                        <FiLinkedin size={20} />
                     </a>
                     <a href="mailto:your.email@example.com" className="p-2 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all">
                         <Mail size={20} />
@@ -72,9 +73,6 @@ export default function Dock() {
 
                             {/* Modal Body (The PDF Viewer) */}
                             <div className="flex-1 w-full bg-white/5">
-                                {/* Make sure you put a file named 'resume.pdf' in your /public folder! 
-                  The iframe will display it natively.
-                */}
                                 <iframe
                                     src="/resume.pdf"
                                     className="w-full h-full border-none"
