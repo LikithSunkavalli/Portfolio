@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+"use client";
 const skills = [
   "Natural Language Processing", "Computer Vision", "Next.js", "Python",
   "PyTorch", "Flask", "MySQL", "Tailwind CSS", "Word2Vec", "ArcFace",

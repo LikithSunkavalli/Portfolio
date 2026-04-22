@@ -24,7 +24,7 @@ const achievements = [
         tag: "Research"
     }
 ];
-
+"use client";
 export default function Achievements() {
     return (
         <section className="py-20 max-w-4xl mx-auto px-6">

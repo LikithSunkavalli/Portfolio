@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+"use client";
 const projects = [
     { title: "SpendWise", domain: "Full Stack", color: "from-blue-500/20" },
     { title: "Face Recognition", domain: "AI/CV", color: "from-purple-500/20" }
